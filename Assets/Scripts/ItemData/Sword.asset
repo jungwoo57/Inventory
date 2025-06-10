@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cd20e166c128141b05e219e4a9d90c, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 20d2c413c1ae1f841b0a2df3ce809eb1, type: 3}
   name: 
-  atk: 0
+  atk: 10
   hp: 0

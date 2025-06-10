@@ -8,6 +8,8 @@ public class PlayerStatus : MonoBehaviour
     [field: SerializeField] public int atk { get; private set; }
     [field: SerializeField] public int hp { get; private set; }
     [field: SerializeField] public int level { get; private set; }
-
+    [filed: SerializeField] public int itemIndex { get; set; }
+    
+    
 
 }

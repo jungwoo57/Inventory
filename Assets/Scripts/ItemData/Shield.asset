@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cd20e166c128141b05e219e4a9d90c, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 4949112d061ad984f8b24c602bb9af55, type: 3}
   name: 
   atk: 0
-  hp: 0
+  hp: 10
