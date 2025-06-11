@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject statusPanel;
+    public StatusPanelUI statusPanel;
     public GameObject inventoryPanel;
     
     
     public void OpenStatusPanel()
     {
-        statusPanel.SetActive(true);
+        statusPanel.gameObject.SetActive(true);
+        statusPanel.UpdateUI();
     }
 
     public void CloseStatusPanel()
     {
-        statusPanel.SetActive(false);
+        statusPanel.gameObject.SetActive(false);
     }
 
     public void OpenInventory()

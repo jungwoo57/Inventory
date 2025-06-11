@@ -67,14 +67,16 @@ public class Inventory : MonoBehaviour
     {
         if(slots[index].item == null) return;
 
-        if (slots[curItemIndex].equiped)
+        if (slots[selectItemIndex].equiped)
         {
-            UnEquip(curItemIndex);
+            UnEquip(selectItemIndex);
         }
 
         slots[index].equiped = true;
         selectedItem = slots[index];
         selectItemIndex = index;
+        curItemIndex = index;
+        PlayerManager.Instance.Player.status.item = slots[index].item;
         UpdateUI();
         
     }
@@ -82,9 +84,9 @@ public class Inventory : MonoBehaviour
     public void UnEquip(int index)
     {
         slots[index].equiped = false;
-        if (selectItemIndex == index)
+        /*if (selectItemIndex == index)
         {
             SelectItem(selectItemIndex);
-        }
+        }*/
     }
 }
