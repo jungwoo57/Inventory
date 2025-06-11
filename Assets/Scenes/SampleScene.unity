@@ -4580,10 +4580,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af0b851108e8a40b47a740fc9b666f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItem: []
   slots:
-  - {fileID: 1540836783}
-  - {fileID: 127940236}
+  - {fileID: 1540836789}
+  - {fileID: 127940242}
   - {fileID: 640000485}
   - {fileID: 427463845}
   - {fileID: 602929303}

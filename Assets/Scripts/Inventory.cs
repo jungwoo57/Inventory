@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
-    public Item[] hasItem;
     public ItemSlots[] slots;
     public Transform slotPanel;
 
