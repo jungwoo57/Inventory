@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public int curItemIndex;
     public ItemSlots selectedItem;
     public int selectItemIndex;
+    private PlayerInstance currentPlayerInstance;
     
     private void Start()
     {
@@ -27,6 +28,22 @@ public class Inventory : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void LoadOrStart()
+    {
+        PlayerInstance saveInstance = SaveManager.LoadPlayerInstance();
+
+        if (saveInstance != null)
+        {
+            currentPlayerInstance = saveInstance;
+        }
+        else
+        {
+            currentPlayerInstance = new PlayerInstance(null);
+        }
+
+        PlayerManager.Instance.Player.status.item = currentPlayerInstance.currentitemData;
+
+    }
     void AddItem()
     {
         ItemData data = PlayerManager.Instance.Player.itemData;
@@ -76,6 +93,8 @@ public class Inventory : MonoBehaviour
         selectItemIndex = index;
         curItemIndex = index;
         PlayerManager.Instance.Player.status.item = slots[index].item;
+        currentPlayerInstance = new PlayerInstance(slots[index].item);
+        SaveManager.SavePlayerInstance(currentPlayerInstance);
         UpdateUI();
         
     }
